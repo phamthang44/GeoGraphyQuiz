@@ -40,7 +40,7 @@ namespace GeoGraphyQuiz.UI
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void PlayGameBtn_Click_1(object sender, EventArgs e)
