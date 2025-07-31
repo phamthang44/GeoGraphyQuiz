@@ -110,6 +110,13 @@ namespace GeoGraphyQuiz.UI
             var tf = _trueFalseQuestionService.GetAllQuestions();
             var oq = _openQuestionService.GetAllQuestions();
             List<Question> questions = mq.Cast<Question>().Concat(tf).Concat(oq).ToList();
+
+            if (questions == null && questions.Count == 0)
+            {
+                MessageBox.Show("No questions available. Please add questions first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             correctQuestions = questions;
             for (int i = 0; i < questions.Count; i++)
             {
