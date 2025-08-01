@@ -87,20 +87,16 @@ namespace GeoGraphyQuiz.UI.UserControls
                 string optB = optionBInput.Text.Trim();
                 string optC = optionCInput.Text.Trim();
                 string optD = optionDInput.Text.Trim();
-
                 char correctOption = radioButtonA.Checked ? 'A' :
                              radioButtonB.Checked ? 'B' :
                              radioButtonC.Checked ? 'C' :
                              radioButtonD.Checked ? 'D' : '\0';
-
                 if (string.IsNullOrEmpty(questionText) || correctOption == '\0')
                 {
                     MessageBox.Show("Please fill in all fields and select the correct answer.");
                     return;
                 }
-
                 var selectedQuestion = GetSelectedQuestion<MultipleChoiceQuestion>();
-
                 if (_isCreatingNew && selectedQuestion == null)
                 {
                     var newQuestion = new MultipleChoiceQuestion
@@ -129,10 +125,8 @@ namespace GeoGraphyQuiz.UI.UserControls
                         MessageBox.Show("Question not found in database.");
                         return;
                     }
-
                     // Update content question
                     question.QuestionText = questionText;
-
                     foreach (var answer in question.Options)
                     {
                         switch (answer.OptionLabel)
@@ -157,16 +151,13 @@ namespace GeoGraphyQuiz.UI.UserControls
                                 break;
                         }
                     }
-
                     // Update question
                     _questionService.UpdateQuestion(question);
-
                     MessageBox.Show("Question updated successfully!");
                 }
                 // Refresh UI
                 RefreshListQuestion();
                 LoadSelectedQuestion();
-                
             }
             catch (Exception ex)
             {

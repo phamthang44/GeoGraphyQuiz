@@ -18,7 +18,6 @@ namespace GeoGraphyQuiz.UI
 {
     public partial class CreateQuestionForm : Form
     {
-
         private readonly IServiceProvider _provider;
         private Stack<UserControl> navigationHistory = new Stack<UserControl>();
         public CreateQuestionForm(IServiceProvider serviceProvider)

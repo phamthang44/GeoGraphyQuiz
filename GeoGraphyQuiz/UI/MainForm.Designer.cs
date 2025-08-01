@@ -66,7 +66,6 @@
             GameHeading.Size = new Size(773, 65);
             GameHeading.TabIndex = 2;
             GameHeading.Text = "Welcome to Geography Quiz Game";
-            GameHeading.Click += GameHeading_Click;
             // 
             // exitBtn
             // 

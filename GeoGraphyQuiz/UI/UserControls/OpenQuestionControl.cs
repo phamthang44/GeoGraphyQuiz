@@ -284,7 +284,7 @@ namespace GeoGraphyQuiz.UI.UserControls
             rdoMain.AutoSize = true;
             rdoMain.CheckedChanged += (s, args) =>
             {
-                // Logic: Nếu checked, uncheck tất cả các RadioButton khác
+                // Logic: If checked, uncheck all other RadioButton
                 if (rdoMain.Checked)
                 {
                     foreach (Control item in flowLayoutPanel.Controls)
@@ -301,7 +301,7 @@ namespace GeoGraphyQuiz.UI.UserControls
                 }
             };
 
-            // Nút X để xóa đáp án
+            //X fore removing answers
             Button btnDelete = new Button();
             btnDelete.Text = "X";
             btnDelete.BackColor = Color.Red;

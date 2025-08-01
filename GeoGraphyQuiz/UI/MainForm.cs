@@ -20,22 +20,11 @@ namespace GeoGraphyQuiz.UI
             InitializeComponent();
             _provider = provider;
         }
-
-        private void GameHeading_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CreateQuestionBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             var createForm = _provider.GetRequiredService<CreateQuestionForm>();
             createForm.Show();
-        }
-
-        private void PlayGameBtn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
